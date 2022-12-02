@@ -1,8 +1,8 @@
-import classes from './NewPostForm.module.css';
+import classes from "./NewPostForm.module.css";
 
-function NewPostForm({ onCancel, onSubmit, submitting }) {
+function NewPostForm({ onCancel, submitting }) {
   return (
-    <form className={classes.form} onSubmit={onSubmit}>
+    <form className={classes.form} /*onSubmit={onSubmit} */>
       <fieldset>
         <label htmlFor="title">Title</label>
         <input id="title" type="text" name="title" required minLength={5} />
@@ -21,7 +21,7 @@ function NewPostForm({ onCancel, onSubmit, submitting }) {
         Cancel
       </button>
       <button disabled={submitting}>
-        {submitting ? 'Submitting...' : 'Create Post'}
+        {submitting ? "Submitting..." : "Create Post"}
       </button>
     </form>
   );
